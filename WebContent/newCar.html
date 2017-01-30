@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add A Car</title>
+<link rel="stylesheet" type="text/css" href="carinfocss.css">
+</head>
+<body>
+<div id="header">
+     <a href="index.html">Home</a>
+     <a href="Cars.do">View All Vehicles</a>
+     <a href="test.jsp">Filter Form</a>
+     </div>
+     <br/>
+	<h1>Please enter information of the car you want to list.</h1>
+	<form action="NewCar.do" method="POST">
+		Is your car new or used?:
+		<select name="newUsed">
+		<option value="New">New</option>
+		<option value="Used">Used</option>
+		</select><br/>
+		Make:<input type="text" name="brand"/><br/>
+		Model:<input type="text" name="model"/><br/>
+		Color: <input type="text" name="color"/><br/>
+		Amount of miles: <input type="text" name="miles"/><br/>
+		Cost(numbers only): <input type="text" name="cost"/><br/>
+		URL to a picture: <input type="text" name="picture"/><br/>
+		Extra Info: <textarea name="info"></textarea><br/>	
+		<input type="submit" value="Add vehicle"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+	background-color: #D7CEC7;
+	color:#565656; 
+}
+
+h1{
+	color:#76323F;
+	text-align: center;
+}
+
+#carinfo{
+	text-align:center;
+}
+
+#header{
+	text-align:center;
+}
+#footer{
+	text-align:center;
+	display:flex;
+	justify-content:center;
+}
+
+img {
+	width: 360px;
+	height: 250px;
+	position: relative;
+}
+
+ul{
+	list-style-type: none;
+}
+
+#homepics{
+	float:left;
+}
+
+li{
+	color:#565656; 
+}
+
+div{
+	text-align: left;
+}

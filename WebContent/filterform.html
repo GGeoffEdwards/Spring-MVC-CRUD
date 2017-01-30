@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="carinfocss.css">
+<title>Filter Form</title>
+</head>
+<body>
+<div id="header">
+     <a href="index.html">Home</a>
+     <a href="Cars.do">View All Vehicles</a>
+     <a href="test.jsp">Filter Form</a>
+     </div>
+     <br/>
+	<h1>Please enter information that you would like to filter by:</h1>
+	<form action="FilterCars.do" method="GET">
+		New or Used:<input type="text" name="newUsed"/><br/>
+		Make:<input type="text" name="brand"/><br/>
+		Color: <input type="text" name="color"/><br/>
+		The most you are willing to pay(numbers only): <input type="text" name="cost"/><br/>
+		<input type="submit" value="filter Vehicles"/>
+	</form>
+</body>
+</html>
