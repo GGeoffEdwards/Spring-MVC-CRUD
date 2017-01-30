@@ -27,7 +27,6 @@ public class CarsDAOImpl implements CarsDAO {
 	public void init() {
 		try (InputStream is = wac.getServletContext().getResourceAsStream(FILE_NAME);
 				BufferedReader buf = new BufferedReader(new InputStreamReader(is));) {
-			System.out.println("ttttt");
 			String line = buf.readLine();
 			while ((line = buf.readLine()) != null) {
 				String[] tokens = line.split(",");
@@ -159,8 +158,6 @@ public class CarsDAOImpl implements CarsDAO {
 	
 	public List<Car> getFilterCars(String newUsed, String brand, String color, String cost){
 		filteredCars = cars.stream().collect(Collectors.toList());
-		//filteredCars = cars;
-		//public ArrayList(Collection<? extends E> c);
 		ArrayList<Car> removedCars = new ArrayList<>();
 		
 		if(cost!=""){
@@ -184,7 +181,6 @@ public class CarsDAOImpl implements CarsDAO {
 			for (Car car : filteredCars) {
 				if(!car.getBrand().equalsIgnoreCase(brand)){
 					removedCars.add(car);
-					//System.out.println(car);
 				}
 			}
 		}
@@ -194,8 +190,7 @@ public class CarsDAOImpl implements CarsDAO {
 					removedCars.add(car);
 				}
 			}
-		}
-		
+		}	
 		for(Car c : removedCars){
 			filteredCars.remove(c);
 		}

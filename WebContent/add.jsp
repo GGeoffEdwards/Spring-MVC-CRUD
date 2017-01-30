@@ -10,6 +10,7 @@
 <body>
 	<div id="header">
      <a href="index.html">Home</a>
+     <a href="filterform.html">Filter Form</a>
      </div>
 <h1>You have successfully added:</h1>
         <img src="${car.picture}"/>

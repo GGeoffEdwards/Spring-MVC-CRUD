@@ -11,7 +11,7 @@
 <div id="header">
      <a href="index.html">Home</a>
      <a href="Cars.do">View All Vehicles</a>
-     <a href="test.jsp">Filter Form</a>
+     <a href="filterform.html">Filter Form</a>
      </div>
      <br/>
 	<h1>Please enter information that you would like to filter by.</h1>
@@ -19,7 +19,7 @@
 		New or Used:<input type="text" name="newUsed"/><br/>
 		Make:<input type="text" name="brand"/><br/>
 		Color: <input type="text" name="color"/><br/>
-		Cost(numbers only): <input type="text"/><br/>
+		Cost(numbers only): <input type="text" name="cost"/><br/>
 		<input type="submit" value="filter Vehicles"/>
 	</form>
 </body>

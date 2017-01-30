@@ -25,9 +25,13 @@ public class CarsController {
 	@RequestMapping(path = "NewCar.do", method = RequestMethod.POST)
 	public String addCar(HttpSession session,String newUsed, String brand, String model, String color, String miles, String picture,
 			String info, String cost) {
-		//String id= lastIndexOf(carsDAO.getCars()).;
 		int lastId = Integer.parseInt(carsDAO.getCars().get(carsDAO.getCars().size()-1).getId());
 		String id = "" + (lastId + 1);
+		try {
+			Double costD = Double.parseDouble(cost);	
+		} catch (Exception e) {
+			return "invalid";
+		}
 		Car car = new Car(id, newUsed, brand, model, color, miles,picture, info, cost);
 		carsDAO.addCar(car);
 		session.setAttribute("car", car);
@@ -118,7 +122,6 @@ public class CarsController {
 	@RequestMapping(path = "FilterCars.do", method = RequestMethod.GET)
 	public String getFilterCars(HttpSession session, String newUsed, String brand, 
 			String color, String cost){
-		
 		try {
 			List<Car> filter = carsDAO.getFilterCars(newUsed, brand, color, cost);
 			if (filter.isEmpty()){

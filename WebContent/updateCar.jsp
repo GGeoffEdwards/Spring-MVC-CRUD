@@ -11,7 +11,7 @@
 <div id="header">
      <a href="index.html">Home</a>
      <a href="Cars.do">View All Vehicles</a>
-     <a href="test.jsp">Filter Form</a>
+     <a href="filterform.html">Filter Form</a>
      </div>
      <br/>
 	<h1>Please enter information that you would like to update.</h1>
